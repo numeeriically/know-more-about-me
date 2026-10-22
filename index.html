@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/displayClock.css">
+  <link rel="stylesheet" href="css/contentStyle.css">
+  <link rel="stylesheet" href="css/stylesheet_vidbg.css">
+  <link rel="stylesheet" href="css/soundPlayer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap">
+</head>
+
+<body>
+<div class="webContent">
+ <div class="top-banner">
+   <p>Currently playing: None</p>
+ </div>
+  <div class="displayClock" id="clock">
+    <h1 id="date-time"></h1>
+  </div>
+<div class="intro-container">
+  <div class="profile-section">
+    <img src="assets/sprites/catpp.jpg" alt="Profile Picture" class="profile-picture">
+      <p class="profile-name">numerically</p>
+  </div>
+  <p class="intro-text">Greetings, and welcome to my portfolio</p>
+    <p class="intro-text">
+      Hi. Hello. Hey.
+      <br><br>
+      I have many names, and most people call me zenith...<br> I spend my entire day on productivity, such as light-coding for my indie website frontend project or reading novels and find  hypothetical question out of it. If you wanna know me better, contact me on Discord!
+    </p>
+  <div class="social-media-links">
+    <a href="https://www.roblox.com/users/978511103/profile" target="_blank">
+      <img src="assets/sprites/Roblox.png" alt="Roblox" class="roblox-logo">
+    </a>
+    <a href="https://x.com/dottzunoo" target="_blank">
+      <img src="assets/sprites/x-Twitter.png" alt="Twitter" class="twitter-logo">
+    </a>
+    <a href="https://www.youtube.com/@MuhammadFakhriIsmail" target="_blank">
+      <img src="assets/sprites/youtubeLogo.png" alt="YouTube" class="youtube-logo">
+    </a>
+    <a href="http://discordapp.com/users/916479510386442251" target="_blank">
+      <img src="assets/sprites/discord.png" alt="Discord" class="discord-logo">
+    </a>
+  </div>
+  </div>
+    <div class="audio-tracker">
+      <p>kenish - i want the sky</p>
+        <span id="current-time">00:00</span>
+          <button id="play-button">Play</button>
+            <button id="volume-button">
+              <img src="assets/sprites/volumeLogo.png" alt="Volume Icon" class="volume-icon">
+            </button>
+          <input type="range" id="volume-slider" min="0" max="100" value="50">
+        </div>
+      <audio id="audio-player" src="assets/audio/musicAudio.mp3" type="audio/mpeg" preload="metadata" loop></audio>
+        <div class="videoBackground">
+          <video autoplay loop muted playsinline>
+            <source src="assets/videos/videoBackground.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+
+      <script src="js/displayClock.js" type="text/javascript"></script>
+      <script src="js/volumeSlider.js" type="text/javascript"></script>
+    </body>
+  </html>

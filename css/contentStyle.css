@@ -1,0 +1,188 @@
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+}
+
+@keyframes banner-color-slide {
+  0% {
+    background-position: 0% 0%;
+  }
+    100% {
+    background-position: 200% 0%;
+  }
+}
+
+.top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 500px;
+  margin-bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 12px 0;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: transparent;
+  background: linear-gradient(90deg, white, black, white);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: banner-color-slide 3s linear infinite;
+}
+
+.top-banner p {
+  margin: 0;
+  padding: 0;
+}
+
+.intro-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: fit-content;
+  max-width: calc(100vw - 20px);
+  box-sizing: border-box;
+  padding: 70px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0  ;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body:hover .intro-container {
+  opacity: 1;
+}
+
+@keyframes intro-text-color {
+  0% {
+    background-position: 0% 100%;
+  } 
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.intro-text {
+  line-height: 1.6;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(90deg, white, rgb(182, 181, 181), white, white, white, white); 
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: intro-text-color 3s infinite;
+  max-width: 450px;
+  transition: color infinite linear , opacity infinite linear ;
+}
+
+.intro-text::after {
+  content: "";
+  display: block;
+  width: 450px;
+  height: 1px;
+  margin: 15px auto;
+  background-color: #ffffff;
+  border: none;
+}
+
+.intro-text:last-child::after {
+  content: "";
+}
+
+.intro-text:hover {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 25px;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: none;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  animation: text-glow 2s infinite alternate;
+}
+
+@keyframes text-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 
+                 0 0 10px rgba(255, 255, 255, 0.3), 
+                 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.8), 
+                 0 0 30px rgba(255, 255, 255, 1);
+  }
+}
+
+.social-media-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.social-media-links a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.twitter-logo,
+.roblox-logo,
+.discord-logo,
+.youtube-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+  animation: inner-glow 2s infinite alternate;
+}
+
+@keyframes inner-glow {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(2);
+  }
+}
+
+.roblox-logo:hover,
+.twitter-logo:hover,
+.discord-logo:hover,
+.youtube-logo:hover{
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}

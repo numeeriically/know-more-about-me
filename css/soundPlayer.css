@@ -1,0 +1,123 @@
+.audio-tracker {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  height: auto;
+  width: 320px;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 100px 0px 0px 0px;
+  padding: 5px 12px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 15px;
+  transition: width 0.3s ease;
+}
+
+.audio-tracker p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.audio-tracker.expanded {
+  width: 380px;
+}
+
+.audio-tracker.expanded-slider {
+  width: 500px;
+}
+
+#play-button {
+  width: 60px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#play-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.volume-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#volume-button {
+  width: 60px;  
+  height: 35px;
+  border-radius: 20px;
+  background-color: rgba(255, 247, 247, 0.521);
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#volume-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#volume-button:hover {
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.1);
+}
+
+#current-time{
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+#volume-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#volume-slider {
+  width: 120px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#volume-slider.show {
+  opacity: 1;
+  visibility: visible;
+}
